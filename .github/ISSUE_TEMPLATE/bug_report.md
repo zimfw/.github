@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-- [ ] I've checked the [existing issues](https://github.com/zimfw/zimfw/issues?q=is%3Aissue) and I'm not duplicating a report.
+- [ ] I've checked the [existing issues](../issues?q=is%3Aissue) and I'm not duplicating a report.
 - [ ] I'm using the [latest version](https://github.com/zimfw/zimfw/releases/latest) of `zimfw`.
 - [ ] I've checked the [Changelog](https://github.com/zimfw/zimfw/blob/master/CHANGELOG.md) and I'm not being affected by documented changes.
 - [ ] I've checked the [📢 Announcements](https://github.com/zimfw/zimfw/discussions/426?sort=new) and I'm not being affected by announced changes.
