@@ -1,0 +1,68 @@
+name: Bug report
+description: Create a report to help us improve
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: Please answer the following questions for yourself before submitting
+        an issue.
+      options:
+        - label: I've checked the [existing issues](../issues?q=is%3Aissue) and I'm not
+            duplicating a report.
+          required: false
+        - label: I've checked the zimfw [Changelog](https://github.com/zimfw/zimfw/blob/master/CHANGELOG.md)
+            and I'm not being affected by documented changes.
+          required: false
+        - label: I've checked the zimfw [📢 Announcements](https://github.com/zimfw/zimfw/discussions/426?sort=new)
+            and I'm not being affected by announced changes.
+          required: false
+  - type: textarea
+    attributes:
+      label: Bug description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      value: |
+        <!-- The first step in this pre-filled text restarts the shell with a clean
+        installation of zimfw in a temporary directory. Add further steps to reproduce
+        the behavior. Use a step that does `exec zsh` when restarting the terminal or
+        restarting the shell is needed. -->
+        1. ```
+           cd ${$(mktemp -d):A} && \
+               ZDOTDIR=${PWD} HOME=${PWD} ZIM_HOME=${PWD}/.zim && \
+               curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh && \
+               exec zsh
+           ```
+        2. `Add more steps here ...`
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Current behavior
+      description: A clear and concise description of what is currently happening.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: zimfw info
+      description: In a terminal, run `zimfw info`, and paste the output below. This
+        will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the problem here.
+    validations:
+      required: false
